@@ -1,0 +1,13 @@
+.logo{
+    width: 150px;
+    margin-bottom: 3vh;
+    display: flex;
+    justify-content: flex-start;
+    text-indent: -9999px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin-right: 66vw;
+}
