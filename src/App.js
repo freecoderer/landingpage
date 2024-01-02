@@ -1,8 +1,11 @@
 import soundbar from './Group 10.svg';
 import mesg from './Group 9.svg';
 import mesglv from './Group 7.svg';
+import phonepic1 from './phonepic1.svg';
+import phonepic2 from './phonepic2.svg';
 import './App.css';
 import Navbar from "./nav";
+import mylistlogo from "./Mylist 1.svg";
 
 function App() {
   return (
@@ -34,18 +37,33 @@ function App() {
                   </svg>
               </div>
           </div>
+          <div className={"maincontainer"}>
           <div className={"second"}>
               <div className={"imgcontainer"}>
               <img src={mesg} className={"mesg"} alt="logo"/>
               <img src={mesglv} className={"mesglv"} alt="logo"/>
               </div>
               <div className={"texto3"}>
+                  <p className={"texto2"}>SNS가 필수인 시대에서</p>
+                  <br></br>
                   <p className={"texto1"}>음악 플레이리스트는 나의 취향과 나 자체를 드러내는</p>
                   <p className={"texto1"}>가장 중요한 요소입니다.</p>
               </div>
               <div className={"empty"}></div>
           </div>
-
+              <img src={phonepic1} className={"phonepic1"}></img>
+          <div className={"subsecond"}>
+            <p className={"texto21"}>저희는 ‘나’를 드러내는 수단으로 플레이리스트를 활용해, </p>
+              <img src={phonepic2} className={"phonepic2"}></img>
+            <p className={"texto22"}>다른 사람들과 공유하고 싶은 음악을 찾아주는 서비스를 제공합니다.</p>
+          </div>
+              <div className={"btm"}>
+                  <p className={"btmhook"}>My List를 통해 나의 플레이리스트를 공유해보세요.</p>
+                  <img src={mylistlogo} className={"mylistlogo"}></img>
+                  <input type="email" id="email" name="email" className="email-input"/>
+                  <button type="submit" className="submit-button">Submit</button>
+              </div>
+          </div>
       </>
   );
 }
