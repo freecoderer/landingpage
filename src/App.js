@@ -8,9 +8,11 @@ import Navbar from "./nav";
 import mylistlogo from "./Mylist 1.svg";
 import React, { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import Modal from 'react-modal';
 function App() {
     const [language, setLanguage] = useState('en'); // default language is English
-
+    const [showModal, setShowModal] = useState(false);
+    const [showErrorModal, setShowErrorModal] = useState(false);
     const toggleLanguage = () => {
         setLanguage(prevLanguage => prevLanguage === 'en' ? 'ko' : 'en'); // toggle between English and Korean
     };
@@ -20,12 +22,19 @@ function App() {
     const sendEmail = (e) => {
         e.preventDefault();
 
-        emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
+        emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, form.current, process.env.REACT_APP_PUBLIC_KEY)
             .then((result) => {
                 console.log(result.text);
+                setShowModal(true);
             }, (error) => {
                 console.log(error.text);
+                setShowErrorModal(true);
             });
+    };
+
+    const closeModal = () => {
+        setShowModal(false); // function to close the modal
+        setShowErrorModal(false);
     };
 
   return (
@@ -92,6 +101,22 @@ function App() {
                   </div>
               </div>
           </div>
+          <Modal
+              isOpen={showModal}
+              onRequestClose={closeModal}
+              contentLabel="Success Modal"
+          >
+              <h2>Email Sent Successfully!</h2>
+              <button onClick={closeModal}>Close</button>
+          </Modal>
+          <Modal
+              isOpen={showErrorModal}
+              onRequestClose={closeModal}
+              contentLabel="Error Modal"
+          >
+              <h2>Error Sending Email!</h2>
+              <button onClick={closeModal}>Close</button>
+          </Modal>
       </>
 );
 }

@@ -350,3 +350,52 @@
   font-weight: 700;
   line-height: normal;
 }
+
+/* Styles for the overlay */
+.ReactModal__Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.2s ease-in-out;
+  opacity: 0;
+}
+
+/* Styles for the overlay after it has been opened */
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+/* Styles for the overlay before it is closed */
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+}
+
+/* Styles for the modal content */
+.ReactModal__Content {
+  position: relative;
+  background-color: #fff; /* white background */
+  border-radius: 4px; /* rounded corners */
+  padding: 20px; /* some padding */
+  width: 80%; /* take up 80% of the screen width */
+  max-width: 500px; /* but don't be wider than 500px */
+  outline: none; /* remove the default focus outline */
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1); /* a subtle shadow */
+  transition: all 0.3s ease-in-out;
+  transform: scale(0.95);
+}
+
+/* Styles for the modal content after it has been opened */
+.ReactModal__Content--after-open {
+  transform: scale(1);
+}
+
+/* Styles for the modal content before it is closed */
+.ReactModal__Content--before-close {
+  transform: scale(0.95);
+}
