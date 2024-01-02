@@ -162,6 +162,8 @@
     margin-top: 50%;
 }
 
+
+
 .texto22{
   position: relative;
   color: #FFF;
@@ -172,8 +174,64 @@
   font-weight: 700;
   line-height: normal;
   margin-bottom: 100vh;
-  margin-right: 21%;
+  margin-right: 17%;
   margin-top: 50%;
+}
+
+/* For screens smaller than 1200px */
+@media (max-width: 1200px) {
+  .texto21 {
+    margin-top: 55%;
+  }
+}
+
+/* For screens smaller than 992px */
+@media (max-width: 992px) {
+  .texto21 {
+    margin-top: 65%;
+  }
+}
+
+/* For screens smaller than 768px */
+@media (max-width: 768px) {
+  .texto21 {
+    margin-top: 120%;
+  }
+}
+
+/* For screens smaller than 576px */
+@media (max-width: 576px) {
+  .texto21 {
+    margin-top: 200%;
+  }
+}
+
+/* For screens smaller than 1200px */
+@media (max-width: 1200px) {
+  .texto22 {
+    margin-top: 55%;
+  }
+}
+
+/* For screens smaller than 992px */
+@media (max-width: 992px) {
+  .texto22 {
+    margin-top: 65%;
+  }
+}
+
+/* For screens smaller than 768px */
+@media (max-width: 768px) {
+  .texto22 {
+    margin-top: 120%;
+  }
+}
+
+/* For screens smaller than 576px */
+@media (max-width: 576px) {
+  .texto22 {
+    margin-top: 200%;
+  }
 }
 
 .phonepic2{
@@ -217,7 +275,7 @@
   z-index: 5;
 }
 
-.btmhook{
+.btmhook2{
     color: #FFF;
     text-align: center;
     font-family: Pretendard;
@@ -225,11 +283,27 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    margin-bottom: 20vh;
+    margin-bottom: 15vh;
+}
+
+.btmhook1{
+  color: #FFF;
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 1.7rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 3vh;
 }
 
 .mylistlogo{
   margin-bottom: 10vh;
+}
+
+.input-button-container {
+  position: relative;
+  width: 65%;
 }
 
 .email-input{
@@ -238,20 +312,34 @@
   border: 3px solid #FFF;
   background: rgba(255, 255, 255, 0.70);
   box-shadow: 0px 0px 20px 3px rgba(255, 255, 255, 0.25);
-  width: 760px;
-  height: 91px;
+  width: 100%; /* make the input field responsive */
+  height: auto; /* adjust the height automatically */
+  padding: 2vw;
   flex-shrink: 0;
+  z-index: 1;
+  font-size: x-large;
+  text-indent: 3vw;
 }
 
 .submit-button{
   border-radius: 100px;
-  background: #FFF;
-  width: 256px;
-  height: 91px;
+  background-color: #FFF !important;
+  padding-top: 2vw;
+  padding-bottom: 2vw;
+  border: solid #FFF;
+  height: auto;
   flex-shrink: 0;
   position: absolute;
+  width: 25%;
   right: 0;
-  top: 70%;
-  transform: translateY(-50%);
+  top: 50%;
+  left: 87%;
+  transform: translate(-50%, -50%);
   z-index: 2;
+  color: #000;
+  font-family: Pretendard;
+  font-size: large;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }

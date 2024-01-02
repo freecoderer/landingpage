@@ -1,5 +1,5 @@
 .logo{
-    width: 150px;
+    width: 200px;
     margin-bottom: 3vh;
     display: flex;
     justify-content: flex-start;
@@ -10,4 +10,20 @@
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     margin-right: 66vw;
+    margin-top: 1vw;
+}
+
+.button-white {
+    background-color: #FFF; /* set the background color as white */
+    border: none; /* remove the default border */
+    color: #000; /* set the text color as black */
+    margin-top:1vw;
+    margin-bottom: 1vw;
+    padding: 1px;
+    text-align: center; /* center the text */
+    text-decoration: none; /* remove the default underline */
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer; /* change the cursor when hovering over the button */
+    border-radius: 100vw;
 }
