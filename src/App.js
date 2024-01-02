@@ -6,13 +6,26 @@ import phonepic2 from './phonepic2.svg';
 import './App.css';
 import Navbar from "./nav";
 import mylistlogo from "./Mylist 1.svg";
-import React, { useState } from 'react';
-
+import React, { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 function App() {
     const [language, setLanguage] = useState('en'); // default language is English
 
     const toggleLanguage = () => {
         setLanguage(prevLanguage => prevLanguage === 'en' ? 'ko' : 'en'); // toggle between English and Korean
+    };
+
+    const form = useRef();
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
     };
 
   return (
@@ -69,13 +82,18 @@ function App() {
                   <p className={"btmhook2"}>{language === 'en' ? 'Get the early access, news & updates with email ' : '하단에 이메일을 입력하시면 가장 먼저 서비스에 대해서 알려드립니다!'}</p>
                   <img src={mylistlogo} className={"mylistlogo"}></img>
                   <div className={"input-button-container"}>
-                      <input type="email" id="email" name="email" placeholder={language === 'en' ? 'Write down your own email' : '이메일 입력하기'} className="email-input"/>
-                      <button type="submit" onClick={() => console.log('submitted')} className="submit-button">{language === 'en' ? 'Send' : '보내기'}</button>
+                      <form ref={form} onSubmit={sendEmail}>
+                          <input type="email" id="email" name="email"
+                                 placeholder={language === 'en' ? 'Write down your own email' : '이메일 입력하기'}
+                                 className="email-input"/>
+                          <button type="submit" onClick={() => console.log('submitted')}
+                                  className="submit-button">{language === 'en' ? 'Send' : '보내기'}</button>
+                      </form>
                   </div>
               </div>
           </div>
       </>
-  );
+);
 }
 
 export default App;

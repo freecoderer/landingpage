@@ -66,11 +66,18 @@
 }
 
 .scrollin{
-  margin-top: 10vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-top: 10vh;
 }
 
 .soundbar{
-  margin-top: 20vh;
+  margin-top: 10vh;
   max-width:90%;
   height:auto;
 }
@@ -317,7 +324,7 @@
   padding: 2vw;
   flex-shrink: 0;
   z-index: 1;
-  font-size: x-large;
+  font-size: large;
   text-indent: 3vw;
 }
 
