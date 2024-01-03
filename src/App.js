@@ -80,16 +80,16 @@ function App() {
               </div>
               <div className={"empty"}></div>
           </div>
-              <img src={phonepic1} className={"phonepic1"}></img>
+              <img src={phonepic1} alt={"phonepic1"} className={"phonepic1"}></img>
           <div className={"subsecond"}>
             <p className={"texto21"}>{language === 'en' ? 'With the playlists which are consisted of the music that you like' : '저희는 ‘나’를 드러내는 수단으로 플레이리스트를 활용해'}</p>
-              <img src={phonepic2} className={"phonepic2"}></img>
+              <img src={phonepic2} alt={"phonepic2"} className={"phonepic2"}></img>
             <p className={"texto22"}>{language === 'en' ? 'You can more easily connect with others' : '다른 사람들과 공유하고 싶은 음악을 찾아주는 서비스를 제공합니다'}</p>
           </div>
               <div className={"btm"}>
                   <p className={"btmhook1"}>{language === 'en' ? 'Share your playlist with ohters' : 'Mylist를 통해 나의 플레이리스트를 공유해 보세요'}</p>
                   <p className={"btmhook2"}>{language === 'en' ? 'Get the early access, news & updates with email ' : '하단에 이메일을 입력하시면 가장 먼저 서비스에 대해서 알려드립니다!'}</p>
-                  <img src={mylistlogo} className={"mylistlogo"}></img>
+                  <img src={mylistlogo}  alt={"mylistlogo"} className={"mylistlogo"}></img>
                   <div className={"input-button-container"}>
                       <form ref={form} onSubmit={sendEmail}>
                           <input type="email" id="email" name="email"
