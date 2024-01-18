@@ -5,6 +5,30 @@
   font-style: normal;
 }
 
+/* ( 크롬, 사파리, 오페라, 엣지 ) 동작 */
+.body::-webkit-scrollbar {
+  display: none;
+}
+
+
+.soundbar-smaller {
+  width: 50%; /* adjust to make the sound bar smaller */
+  height: auto; /* maintain aspect ratio */
+}
+
+.text-smaller {
+  font-size: 0.6em; /* adjust to make the text smaller */
+}
+
+.svg1-smaller, .svg2-smaller {
+  width: 20%; /* adjust to make the SVGs smaller */
+  height: auto; /* maintain aspect ratio */
+}
+.body {
+  -ms-overflow-style: none; /* 인터넷 익스플로러 */
+  scrollbar-width: none; /* 파이어폭스 */
+}
+
 .first{
   background-color: #121212;
   width: 100vw;
@@ -146,7 +170,6 @@
 }
 
 .phonepic1 {
-  position: absolute;
   top: 25%; /* adjust this value as needed */
   left: 75%;
   transform: translate(-50%, -50%);
@@ -242,9 +265,6 @@
 }
 
 .phonepic2{
-  position: absolute;
-  top: 50%; /* adjust this value as needed */
-  left: 30%;
   transform: translate(-50%, -50%);
   z-index: 1;
   width: 30vw;
