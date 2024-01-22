@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Pretendard&display=swap');
+
+.backgrounds{
+    background: url('./background.png') lightgray 50% / cover no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 90rem;
+    height: 190.5rem;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.root{
+    background-color: #010101;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo{
+    width: 7rem;
+    height: 2.47369rem;
+    flex-shrink: 0;
+}
+
+.navnav{
+    display: flex;
+    width: 100%;
+    height: 6.875rem;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 5rem;
+    margin-bottom: 1.12rem;
+}
+
+.firsthook{
+    height: 37.5rem;
+    width: 80rem;
+    margin: 1.12rem 5rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.firsthook1{
+    margin: 4.88rem 8.31rem 22rem 4.56rem;
+    width: 34.5625rem;
+    height: 7.5625rem;
+    flex-shrink: 0;
+}
+
+.texto{
+    color:#FFFFFF;
+    font-family: 'Pretendard', sans-serif;
+    font-size: 2.8rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.texto2{
+    color: #909090;
+    font-family: 'Pretendard', sans-serif;
+    font-size: 1.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 2.8125rem */
+}
+
+.hookimg{
+    width: 32.0625rem;
+    height: 35.9375rem;
+    flex-shrink: 0;
+}
+
+.secondhook{
+    height: 47.5rem;
+    width: 80rem;
+    margin: 3.25rem 5rem 3.25rem;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.texto21{
+    text-align: right;
+    font-family: 'Pretendard', sans-serif;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 150%; /* 3rem */
+    text-transform: uppercase;
+    background: linear-gradient(86deg, #62E7D8 9.59%, #A54BFF 122.26%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.texto22{
+    color: #FFF;
+    text-align: right;
+    font-family: Pretendard;
+    font-size: 3.375rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.thirdhook{
+    height: 47.5rem;
+    width: 80rem;
+    margin: 3.25rem 5rem 3.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.thirdfirsthook{
+    width: 37.6875rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.thirdsecondhook{
+    width: 45.625rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.texto31{
+    text-align: center;
+    font-family: 'Pretendard';
+    font-size: 1.7rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 3rem */
+    text-transform: uppercase;
+    background: linear-gradient(86deg, #62E7D8 9.59%, #A54BFF 122.26%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.texto32{
+    color: #FFF;
+    text-align: center;
+    font-family: 'Pretendard';
+    font-size: 2.8rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.description{
+    display: flex;
+    width: 63.9375rem;
+    height: 12.5rem;
+    align-items: flex-start;
+    gap: 9.5625rem;
+    flex-shrink: 0;
+    margin-top: 26.31rem;
+    margin-bottom: 1.56rem;
+}
+
+.descs{
+    display: flex;
+    padding: 0rem 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    flex: 1 0 0;
+    width: 15rem;
+    height: 10rem;
+}
+
+
+.descnumber{
+    margin: 1.5rem 1rem 0.5rem;
+    color: #A1A1AA;
+    font-family: Pretendard;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.descname{
+    margin-left:1rem;
+    margin-right: 1rem;
+    margin-bottom: 1.5rem;
+    color: #FFF;
+    font-family: Pretendard;
+    font-size: 0.9rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 1.5rem */
+}
+
+.descdesc{
+    color:#A1A1AA;
+    font-family: Pretendard;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 150%; /* 1.3125rem */
+}
+
+.bar{
+    width: 13.125rem;
+    height: 0.125rem;
+    background: #3F3F46;
+    margin-bottom: 0;
+}
+
+.fourthhook{
+    height: 31.375rem;
+    flex-shrink: 0;
+    width: 80rem;
+    margin: 3.25rem 5rem 3.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fourthname{
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 150%; /* 3rem */
+    text-transform: uppercase;
+    background: linear-gradient(86deg, #62E7D8 9.59%, #A54BFF 122.26%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.fourthdesc{
+    color: #FFF;
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.fourthsubtit{
+    margin-top: 2.37rem;
+    margin-bottom: 0.31rem;
+    width: 15.375rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fourthmaintit{
+    width: 47.6rem;
+    height: 10.5rem;
+    margin-bottom: 3.56rem;
+}
+
+.input-button-container{
+    width: 41.875rem;
+    height: 4.375rem;
+    flex-shrink: 0;
+    border-radius: 2.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.00);
+    background: #FFF;
+    color: #B7B7B7;
+    font-family: Pretendard;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 2.25rem */
+    padding-left:2.5rem;
+}
+
+.email-input-button {
+    position: absolute;
+    right: 10px; /* adjust as needed */
+    top: 50%;
+    transform: translateY(-50%); /* Centers the button vertically */
+    /* Add your button styles here */
+    width: 8.75rem;
+    height: 4.9375rem;
+    flex-shrink: 0;
+    background: linear-gradient(73deg, #9F6DF4 21.7%, #B2C0FF 99.98%);
+    border: none; /* Removes the default button border */
+    color: white; /* Sets the text color to white */
+    font-size: 1.5rem; /* Sets the font size */
+    border-radius: 2.5rem; /* Rounds the button corners */
+    cursor: pointer;
+    color: #121212;
+}
+
+.inputbtncon{
+    position: relative;
+}

@@ -1,16 +1,10 @@
-.logo{
-    width: 200px;
-    margin-bottom: 3vh;
+.flexy{
     display: flex;
-    justify-content: flex-start;
-    text-indent: -9999px;
-    overflow: hidden;
-    position: relative;
-    z-index: 1;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    margin-right: 66vw;
-    margin-top: 1vw;
+    width: 90rem;
+    height: 6.875rem;
+    padding: 2.1875rem 79.75rem 2.21381rem 3.25rem;
+    align-items: center;
+    flex-shrink: 0;
 }
 
 .button-white {

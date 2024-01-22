@@ -9,7 +9,6 @@ import mylistlogo from "./Mylist 1.svg";
 import React, { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import Modal from 'react-modal';
-import {RemoveScrollBar} from 'react-remove-scroll-bar';
 
 function App() {
     const [language, setLanguage] = useState('ko'); // default language is English
