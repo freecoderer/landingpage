@@ -1,7 +1,5 @@
 import React, { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
-import Navbar from "./nav";
-import backgroundImage from './background.png';
 import logo from './logo.svg';
 import './PcRenew.css';
 import hookimg from './Group 33.svg';
