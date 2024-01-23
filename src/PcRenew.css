@@ -81,11 +81,33 @@
 }
 
 .secondhook{
-    height: 47.5rem;
+    height: 51.25rem;
     width: 80rem;
-    margin: 3.25rem 5rem 3.25rem;
+    margin: 3.25rem 5rem;
     display: flex;
     flex-direction: row-reverse;
+}
+
+.mockup{
+    width: 32.0625rem;
+    height: 35.9375rem;
+    flex-shrink: 0;
+}
+
+.mockup2{
+    width: 41.69994rem;
+    height: 35.28125rem;
+    flex-shrink: 0;
+}
+
+.imgs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .subsubsecond{
@@ -116,6 +138,7 @@
     line-height: normal;
 }
 
+
 .thirdhook{
     height: 47.5rem;
     width: 80rem;
@@ -137,6 +160,13 @@
     display: flex;
     justify-content: center;
     align-content: center;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: row;
+    gap: 8rem;
+    margin-top: 8rem;
 }
 
 .texto31{
@@ -170,8 +200,13 @@
     align-items: flex-start;
     gap: 9.5625rem;
     flex-shrink: 0;
-    margin-top: 26.31rem;
     margin-bottom: 1.56rem;
+}
+
+.mockups{
+    width: 16.875rem;
+    height: 20.75rem;
+    flex-shrink: 0;
 }
 
 .descs{
@@ -349,4 +384,20 @@
 .secondinfo{
     width: 22.375rem;
     margin-top: 0.44rem;
+}
+
+.agree{
+    width: 177px;
+    height: 20px;
+    flex-shrink: 0;
+    color: #FFF;
+    font-family: Pretendard;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 19.5px */
+}
+
+.underline {
+    text-decoration: underline;
 }
