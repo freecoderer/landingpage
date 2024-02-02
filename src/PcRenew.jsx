@@ -4,7 +4,10 @@ import logo from './logo.svg';
 import './PcRenew.css';
 import hookimg from './Group 33.svg';
 import highlight from './highlight.png';
+import Modal from 'react-modal';
+
 function Renew() {
+    const [isModalOpen, setIsModalOpen] = useState(false);
     const [language, setLanguage] = useState('ko'); // default language is English
     const toggleLanguage = () => {
         setLanguage(prevLanguage => prevLanguage === 'en' ? 'ko' : 'en'); // toggle between English and Korean
@@ -14,6 +17,7 @@ function Renew() {
 
     const sendEmail = (e) => {
         e.preventDefault();
+        setIsModalOpen(true);
 
         emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, form.current, process.env.REACT_APP_PUBLIC_KEY)
             .then((result) => {
@@ -21,6 +25,16 @@ function Renew() {
             }, (error) => {
                 console.log(error.text);
             });
+    };
+
+    const confirmAndSendEmail = () => {
+        emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, form.current, process.env.REACT_APP_PUBLIC_KEY)
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+        setIsModalOpen(false);
     };
 
     return (
@@ -107,7 +121,7 @@ function Renew() {
                 </div>
                 <br></br>
                 <div className={"fourthmaintit"}>
-                    <img src={highlight} alt="highlight" className={"highlight"}/>
+                    <img src={highlight} alt="highlight"  className={`highlight ${isModalOpen ? 'hide' : ''}`}/>
                     <p className={"fourthdesc"}>{language === 'en' ? 'If you want to join in mylist' : '가장 먼저 마이리스트를'}</p>
                     <p className={"fourthdesc"}>{language === 'en' ? 'First on the earth' : '사용하고 싶다면?'}</p>
                 </div>
@@ -126,6 +140,17 @@ function Renew() {
                 <div className={"secondinfo"}><p className={"infoo"}>MyList Copyright ⓒ TEAM CRUSH. All Rights Reserved</p> </div>
             </div>
         </div>
+            <Modal
+                isOpen={isModalOpen}
+                onRequestClose={() => setIsModalOpen(false)}
+                contentLabel="Policy Agreement Modal"
+                className="policy-modal"
+                overlayClassName="modal-overlay"
+            >
+                <h2>Agree to our policies before sending the email</h2>
+                {/* Include your policies here */}
+                <button onClick={confirmAndSendEmail}>I Agree, Send Email</button>
+            </Modal>
         </div>
     );
 }

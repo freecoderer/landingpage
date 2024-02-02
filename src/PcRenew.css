@@ -350,3 +350,57 @@
     width: 22.375rem;
     margin-top: 0.44rem;
 }
+
+.policy-modal {
+    background: #FFF;
+    border-radius: 2.5rem;
+    width: 50rem;
+    height: 30rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.policy-modal h2 {
+    font-family: Pretendard;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #121212;
+    margin-bottom: 2rem;
+}
+
+.policy-modal button {
+    width: 15rem;
+    height: 3rem;
+    background: linear-gradient(73deg, #9F6DF4 21.7%, #B2C0FF 99.98%);
+    border: none;
+    border-radius: 1.5rem;
+    color: #FFF;
+    font-family: Pretendard;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-overlay {
+    background: rgba(0, 0, 0, 0.4); /* Adjust the last value as needed */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide {
+    display: none;
+}
