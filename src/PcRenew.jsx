@@ -7,6 +7,7 @@ import highlight from './highlight.png';
 import mockup from './mockup.svg';
 import mockup2 from './mockup2.svg';
 import mockups from './mockups.svg';
+import materials from './materials.svg';
 function Renew() {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [language, setLanguage] = useState('ko'); // default language is English
@@ -16,10 +17,24 @@ function Renew() {
 
     const form = useRef();
 
+    const validateEmail = (email) => {
+        const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(String(email).toLowerCase());
+    }
 
     const sendEmail = (e) => {
         e.preventDefault();
         setIsModalOpen(true);
+
+        // Get the email input element
+        const emailInput = document.getElementById('email');
+
+        // Validate the email
+        if (!validateEmail(emailInput.value)) {
+            // If the email is not valid, show an alert and stop the function
+            alert('Please enter a valid email address.');
+            return;
+        }
 
         // Get the checkbox element
         const checkbox = document.getElementById('agree');
@@ -27,13 +42,15 @@ function Renew() {
         // Check if the checkbox is not checked
         if (!checkbox.checked) {
             // If the checkbox is not checked, show an alert and stop the function
-            alert('Please agree to the terms and conditions before submitting.');
+            alert('개인정보 수집 이용에 동의 해 주세요\nPlease agree to the terms and conditions before submitting.');
+
             return;
         }
 
         emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, form.current, process.env.REACT_APP_PUBLIC_KEY)
             .then((result) => {
                 console.log(result.text);
+                alert('이메일 전송 완료\nEmail sent successfully!');
             }, (error) => {
                 console.log(error.text);
             });
@@ -83,7 +100,7 @@ function Renew() {
                         <p className={"texto2"}>Create and Share Your Playlist!</p>
                     </div>
                     <div className={"hookimg"}>
-                        <img src={hookimg} alt="Logo" className={"hookimg"}/>
+                        <img src={materials} alt="meterials" className={"meterials"}/>
                     </div>
                 </div>
 
@@ -106,30 +123,28 @@ function Renew() {
                     <div className={"thirdsecondhook"}>
                         <p className={"texto32"}>{language === 'en' ? 'You can only do this with mylist' : '오직 마이리스트에서만 가능하니까'}</p>
                     </div>
-                    <div className={"wrapper"}><img src={mockups} alt="mockups" className={"mockups"}/>
-                        <img src={mockups} alt="mockups" className={"mockups"}/>
-                        <img src={mockups} alt="mockups" className={"mockups"}/></div>
+                    <div className={"h-10"}></div>
                     <div className={"description"}>
                         <div className={"descs"}>
                             <div className={"bar"}>
                             </div>
                             <p className={"descnumber"}>01.</p>
-                            <p className={"descname"}>서비스로 얻을 수 있는 것</p>
-                            <p className={"descdesc"}>음악에서 시작하여 나만의 브랜드를 만들고 싶다는 꿈을 이룬 클레어님의 스토리를 지금 만나보세요!</p>
+                            <p className={"descname"}>{language === 'en' ? 'Whenever I want to tell the music that I like' : '내가 좋아하는 음악을 주변에 알려주고 싶을 때'}</p>
+                            <p className={"descdesc"}>{language === 'en' ? 'You can easily share them with my list!' : '나만 아는 명곡을 주변에 꼭 알려주고 싶었던 적 있나요? 마이리스트를 만들고 프로필 링크를 공유해보세요!'}</p>
                         </div>
                         <div className={"descs"}>
                             <div className={"bar"}>
                             </div>
-                            <p className={"descnumber"}>01.</p>
-                            <p className={"descname"}>서비스로 얻을 수 있는 것</p>
-                            <p className={"descdesc"}>음악에서 시작하여 나만의 브랜드를 만들고 싶다는 꿈을 이룬 클레어님의 스토리를 지금 만나보세요!</p>
+                            <p className={"descnumber"}>02.</p>
+                            <p className={"descname"}>{language === 'en' ? 'Whenever I want to express my emotion with music and pics' : '추억이 담긴 사진과 음악으로 나만의 감성을 담고 싶을 때'}</p>
+                            <p className={"descdesc"}>{language === 'en' ? 'Share precious moment with mylist' : '음악을 들으면 그때의 추억이 떠오르곤 하죠. 친구, 가족, 연인과 함께한 소중한 순간들을 마이리스트로 기록해봐요!'}!</p>
                         </div>
                         <div className={"descs"}>
                             <div className={"bar"}>
                             </div>
-                            <p className={"descnumber"}>01.</p>
-                            <p className={"descname"}>서비스로 얻을 수 있는 것</p>
-                            <p className={"descdesc"}>음악에서 시작하여 나만의 브랜드를 만들고 싶다는 꿈을 이룬 클레어님의 스토리를 지금 만나보세요!</p>
+                            <p className={"descnumber"}>03.</p>
+                            <p className={"descname"}>{language === 'en' ? 'Whenever I want to share my favorite artists' : '내가 좋아하는 아티스트를 마음 껏 티내고 싶을 때'}</p>
+                            <p className={"descdesc"}>{language === 'en' ? 'Make mylist with muisc and picture of your favorite artist and share your link!' : '내가 좋아하는 음악을 주변에 알려주고 싶을 때'}</p>
                         </div>
                     </div>
                 </div>
@@ -153,44 +168,52 @@ function Renew() {
                                 <button type="submit" onClick={() => console.log('btn clicked')}
                                         className="email-input-button">{language === 'en' ? 'Send' : '보내기'}</button>
                             </div>
+                            <br></br>
                             <div>
                                 <input type="checkbox" id="agree" name="agree"/>
                                 <label className={"agree"} htmlFor="agree">
                                     <span
-                                    className="underline">{language === 'en' ? 'terms and conditions' : '개인정보 수집이용'}</span>
-                                    {language === 'en' ? 'I agree to the ' : '에 동의합니다'}
+                                    className="underline white">{language === 'en' ? 'I agree to the terms and conditions' : '개인정보 수집이용에 동의합니다'}</span>
                                 </label>
                             </div>
                         </form>
                     </div>
                     <div className={"barbar"}></div>
-                    <div className={"firstinfo"}><p className={"infoo"}>문의 : mylist.company@gmail.com</p></div>
+                    <div className={"firstinfo"}><p className={"infoo"}>{language === 'en' ? 'Inquire' : '문의'} : mylist.company@gmail.com</p></div>
                     <div className={"secondinfo"}><p className={"infoo"}>MyList Copyright ⓒ TEAM CRUSH. All Rights
                         Reserved</p></div>
                 </div>
                 <br></br>
-                <div className={"fourthmaintit"}>
-                    <img src={highlight} alt="highlight" className={"highlight"}/>
-                    <p className={"fourthdesc"}>{language === 'en' ? 'If you want to join in mylist' : '가장 먼저 마이리스트를'}</p>
-                    <p className={"fourthdesc"}>{language === 'en' ? 'First on the earth' : '사용하고 싶다면?'}</p>
-                </div>
-                <div>
-                    <form ref={form} onSubmit={sendEmail}>
-                        <div className={"inputbtncon"}>
-                        <input className={"input-button-container"} type="email" id="email" name="email"
-                               placeholder={language === 'en' ? 'Write down your own email' : '이메일 입력하기'}
-                               />
-                        <button type="submit" onClick={() => console.log('submitted')}
-                                className="email-input-button">{language === 'en' ? 'Send' : '보내기'}</button></div>
-                    </form>
-                </div>
-                <div className={"barbar"}></div>
-                <div className={"firstinfo"}><p className={"infoo"}>문의 : mylist.company@gmail.com</p></div>
-                <div className={"secondinfo"}><p className={"infoo"}>MyList Copyright ⓒ TEAM CRUSH. All Rights Reserved</p> </div>
             </div>
-        </div>
         </div>
     );
 }
 
 export default Renew;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
