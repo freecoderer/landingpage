@@ -1,33 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Pretendard&display=swap');
 
 .backgrounds{
-    background: url('./background.png') lightgray 50% / cover no-repeat;
+    background: url('./Background360.svg') lightgray 50% / cover no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    width: 90rem;
-    height: 190.5rem;
+    width: 22.5rem;
+    height: 141.5rem;
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-
+.logo{
+    width: 4.375rem;
+    height: 1.546rem;
+    flex-shrink: 0;
+    margin-right:7rem;
+}
 .root{
     background-color: #010101;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-
-.logo{
-    width: 7rem;
-    height: 2.47369rem;
-    flex-shrink: 0;
-    margin-right:53rem;
 }
 
 .navnav{
@@ -42,61 +40,77 @@
 }
 
 .firsthook{
-    height: 37.5rem;
-    width: 80rem;
-    margin: 1.12rem 5rem;
+    height: 8.313rem;
+    width: 18.75rem;
     display: flex;
     flex-direction: row;
+    justify-content: center; /* This will horizontally center the children of firsthook */
+    align-items: center;
+
 }
 
-.firsthook1{
-    margin: 4.88rem 8.31rem 22rem 4.56rem;
-    width: 34.5625rem;
-    height: 7.5625rem;
-    flex-shrink: 0;
+.subfirst{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: left;
+    margin: 0 1.25rem;
 }
 
 .texto{
     color:#FFFFFF;
     font-family: 'Pretendard', sans-serif;
-    font-size: 2.8rem;
+    font-size: 0.86rem;
     font-style: normal;
     font-weight: 800;
     line-height: normal;
 }
 
+.textonew{
+    text-align: right;
+    font-family: 'Pretendard', sans-serif;
+    font-size: 0.625rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 150%; /* 3rem */
+    text-transform: uppercase;
+    background: linear-gradient(86deg, #62E7D8 9.59%, #A54BFF 122.26%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .texto2{
     color: #909090;
     font-family: 'Pretendard', sans-serif;
-    font-size: 1.875rem;
+    font-size: 0.625rem;
     font-style: normal;
     font-weight: 400;
     line-height: 150%; /* 2.8125rem */
 }
 
 .hookimg{
-    width: 32.0625rem;
-    height: 35.9375rem;
+    width: 5rem;
+    height: 6rem;
     flex-shrink: 0;
 }
 
+.meterials{
+    width: 7.375rem;
+    height: 5.875rem;
+}
 .secondhook{
-    height: 51.25rem;
-    width: 80rem;
-    margin: 3.25rem 5rem;
+    height: 1.688rem;
+    width: 13.875rem;
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
     display: flex;
     flex-direction: row-reverse;
 }
 
 .mockup{
-    width: 32.0625rem;
-    height: 35.9375rem;
-    flex-shrink: 0;
-}
-
-.mockup2{
-    width: 41.69994rem;
-    height: 35.28125rem;
+    width: 16.563rem;
+    height: 14.25rem;
     flex-shrink: 0;
 }
 
@@ -104,20 +118,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.subsubsecond{
-    width: 45.5625rem;
-}
-
 .texto21{
     text-align: right;
     font-family: 'Pretendard', sans-serif;
-    font-size: 2rem;
+    font-size: 0.813rem;
     font-style: normal;
     font-weight: 900;
     line-height: 150%; /* 3rem */
@@ -132,12 +141,23 @@
     color: #FFF;
     text-align: right;
     font-family: Pretendard;
-    font-size: 3.375rem;
+    font-size: 0.938rem;
     font-style: normal;
     font-weight: 800;
     line-height: normal;
 }
 
+.descs{
+    display: flex;
+    padding: 0rem 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    flex: 1 0 0;
+    width: 15rem;
+    height: 10rem;
+    margin-bottom: 10rem;
+}
 
 .thirdhook{
     height: 47.5rem;
@@ -172,7 +192,7 @@
 .texto31{
     text-align: center;
     font-family: 'Pretendard';
-    font-size: 1.7rem;
+    font-size: 0.813rem;
     font-style: normal;
     font-weight: 500;
     line-height: 150%; /* 3rem */
@@ -187,83 +207,17 @@
     color: #FFF;
     text-align: center;
     font-family: 'Pretendard';
-    font-size: 2.8rem;
+    font-size: 0.938rem;
     font-style: normal;
     font-weight: 800;
     line-height: normal;
-}
-
-.description{
-    display: flex;
-    width: 63.9375rem;
-    height: 12.5rem;
-    align-items: flex-start;
-    gap: 9.5625rem;
-    flex-shrink: 0;
-    margin-bottom: 1.56rem;
-}
-
-.mockups{
-    width: 16.875rem;
-    height: 20.75rem;
-    flex-shrink: 0;
-}
-
-.descs{
-    display: flex;
-    padding: 0rem 1rem;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1.5rem;
-    flex: 1 0 0;
-    width: 15rem;
-    height: 10rem;
-}
-
-
-.descnumber{
-    margin: 1.5rem 1rem 0.5rem;
-    color: #A1A1AA;
-    font-family: Pretendard;
-    font-size: 0.875rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
-
-.descname{
-    margin-left:1rem;
-    margin-right: 1rem;
-    margin-bottom: 1.5rem;
-    color: #FFF;
-    font-family: Pretendard;
-    font-size: 0.9rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 150%; /* 1.5rem */
-}
-
-.descdesc{
-    color:#A1A1AA;
-    font-family: Pretendard;
-    font-size: 0.875rem;
-    font-style: normal;
-    font-weight: 300;
-    line-height: 150%; /* 1.3125rem */
-}
-
-.bar{
-    width: 13.125rem;
-    height: 0.125rem;
-    background: #3F3F46;
-    margin-bottom: 0;
 }
 
 .fourthhook{
     height: 31.375rem;
     flex-shrink: 0;
     width: 80rem;
-    margin: 3.25rem 5rem 3.25rem;
+    margin-top: 10rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -272,7 +226,7 @@
 .fourthname{
     text-align: center;
     font-family: Pretendard;
-    font-size: 2rem;
+    font-size: 0.938rem;
     font-style: normal;
     font-weight: 900;
     line-height: 150%; /* 3rem */
@@ -287,7 +241,7 @@
     color: #FFF;
     text-align: center;
     font-family: Pretendard;
-    font-size: 3rem;
+    font-size: 1.875rem;
     font-style: normal;
     font-weight: 800;
     line-height: normal;
@@ -312,23 +266,16 @@
     position: relative;
 }
 
-.highlight {
-    position: absolute;
-    z-index: 1;
-    top: -3.7rem;
-    left: 15.5rem;
-}
-
 .input-button-container{
-    width: 41.875rem;
-    height: 4.375rem;
+    width: 17.25rem;
+    height: 2.625rem;
     flex-shrink: 0;
     border-radius: 2.5rem;
     border: 1px solid rgba(0, 0, 0, 0.00);
     background: #FFF;
     color: #B7B7B7;
     font-family: Pretendard;
-    font-size: 1.5rem;
+    font-size: 0.75rem;
     font-style: normal;
     font-weight: 500;
     line-height: 150%; /* 2.25rem */
@@ -341,14 +288,14 @@
     top: 50%;
     transform: translateY(-50%); /* Centers the button vertically */
     /* Add your button styles here */
-    width: 8.75rem;
-    height: 4.9375rem;
+    width: 3.615rem;
+    height: 2.625rem;
     flex-shrink: 0;
     background: linear-gradient(73deg, #9F6DF4 21.7%, #B2C0FF 99.98%);
     border: none; /* Removes the default button border */
     color: white; /* Sets the text color to white */
-    font-size: 1.5rem; /* Sets the font size */
-    border-radius: 2.5rem; /* Rounds the button corners */
+    font-size: 0.75rem; /* Sets the font size */
+    border-radius: 1rem; /* Rounds the button corners */
     cursor: pointer;
     color: #121212;
     font-family: Pretendard, sans-serif;
@@ -375,7 +322,7 @@
     color: #A1A1AA;
     text-align: center;
     font-family: Pretendard;
-    font-size: 0.875rem;
+    font-size: 0.688rem;
     font-style: normal;
     font-weight: 300;
     line-height: 150%; /* 1.3125rem */
@@ -386,18 +333,10 @@
     margin-top: 0.44rem;
 }
 
-.agree{
-    width: 177px;
-    height: 20px;
-    flex-shrink: 0;
-    color: #FFF;
-    font-family: Pretendard;
-    font-size: 13px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 150%; /* 19.5px */
+.hide {
+    display: none;
 }
 
-.underline {
-    text-decoration: underline;
+.white{
+    color: #FFF;
 }

@@ -1,14 +1,11 @@
 import React, { useState, useRef } from 'react';
-import emailjs from '@emailjs/browser';
-import logo from './logo.svg';
-import './PcRenew.css';
-import hookimg from './Group 33.svg';
-import highlight from './highlight.png';
-import mockup from './mockup.svg';
-import mockup2 from './mockup2.svg';
-import mockups from './mockups.svg';
-
+import './smMobileRenew.css'
+import emailjs from "@emailjs/browser";
+import logo from "./logo.svg";
+import materials from "./materials.svg";
+import mockup from "./mockup.svg";
 function Renew() {
+    const [isModalOpen, setIsModalOpen] = useState(false);
     const [language, setLanguage] = useState('ko'); // default language is English
     const toggleLanguage = () => {
         setLanguage(prevLanguage => prevLanguage === 'en' ? 'ko' : 'en'); // toggle between English and Korean
@@ -16,9 +13,24 @@ function Renew() {
 
     const form = useRef();
 
+    const validateEmail = (email) => {
+        const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(String(email).toLowerCase());
+    }
 
     const sendEmail = (e) => {
         e.preventDefault();
+        setIsModalOpen(true);
+
+        // Get the email input element
+        const emailInput = document.getElementById('email');
+
+        // Validate the email
+        if (!validateEmail(emailInput.value)) {
+            // If the email is not valid, show an alert and stop the function
+            alert('Please enter a valid email address.');
+            return;
+        }
 
         // Get the checkbox element
         const checkbox = document.getElementById('agree');
@@ -26,16 +38,28 @@ function Renew() {
         // Check if the checkbox is not checked
         if (!checkbox.checked) {
             // If the checkbox is not checked, show an alert and stop the function
-            alert('Please agree to the terms and conditions before submitting.');
+            alert('개인정보 수집 이용에 동의 해 주세요\nPlease agree to the terms and conditions before submitting.');
+
             return;
         }
 
         emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, form.current, process.env.REACT_APP_PUBLIC_KEY)
             .then((result) => {
                 console.log(result.text);
+                alert('이메일 전송 완료\nEmail sent successfully!');
             }, (error) => {
                 console.log(error.text);
             });
+    };
+
+    const confirmAndSendEmail = () => {
+        emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, form.current, process.env.REACT_APP_PUBLIC_KEY)
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+        setIsModalOpen(false);
     };
 
     return (
@@ -44,7 +68,7 @@ function Renew() {
                 <div className={"navnav"}>
                     <img src={logo} alt="Logo" className={"logo"}/>
                     <button onClick={toggleLanguage}
-                            className="w-[6rem] h-[2.7rem] ml-1 bg-neutral-700 rounded-[0.5rem] flex items-center">
+                            className="btnn w-[5.3rem] h-[2.5rem] bg-neutral-700 rounded-[0.5rem] flex items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23" fill="none"
                              className={"ml-1"}>
                             <g clip-path="url(#clip0_1_10)">
@@ -61,18 +85,18 @@ function Renew() {
                                 </clipPath>
                             </defs>
                         </svg>
-                        <div className={"w-[0.7rem]"}></div>
+
                         <div><p className={"text-amber-50"}>{language === 'en' ? '한국어' : 'English'}</p></div>
                     </button>
                 </div>
                 <div className={"firsthook"}>
-                    <div className={"firsthook1"}>
+                    <div className={"subfirst"}>
+                        <p className={"textonew"}>{language === 'en' ? 'If you share each others music taste' : '서로의 음악 취향이 궁금할 때'}</p>
                         <p className={"texto"}>{language === 'en' ? 'The place where I can find my music taste mylist' : '나만의 음악 취향이'}</p>
                         <p className={"texto"}>{language === 'en' ? '' : '완성되는 공간, 마이리스트'}</p>
-                        <p className={"texto2"}>Create and Share Your Playlist!</p>
-                    </div>
+                        <p className={"texto2"}>Create and Share Your Playlist!</p></div>
                     <div className={"hookimg"}>
-                        <img src={hookimg} alt="Logo" className={"hookimg"}/>
+                        <img src={materials} alt="meterials" className={"meterials"}/>
                     </div>
                 </div>
 
@@ -84,10 +108,7 @@ function Renew() {
                         </div>
                     </div>
                 </div>
-                <div className={"imgs"}>
                     <img src={mockup} alt="mockup" className={"mockup"}/>
-                    <img src={mockup2} alt="mockup2" className={"mockup2"}/>
-                </div>
                 <div className={"thirdhook"}>
                     <div className={"thirdfirsthook"}>
                         <p className={"texto31"}>{language === 'en' ? 'Express yourself with playlist!' : '나만의 플레이리스트를 자유롭게 표현해봐!'}</p>
@@ -95,33 +116,29 @@ function Renew() {
                     <div className={"thirdsecondhook"}>
                         <p className={"texto32"}>{language === 'en' ? 'You can only do this with mylist' : '오직 마이리스트에서만 가능하니까'}</p>
                     </div>
-                    <div className={"wrapper"}><img src={mockups} alt="mockups" className={"mockups"}/>
-                        <img src={mockups} alt="mockups" className={"mockups"}/>
-                        <img src={mockups} alt="mockups" className={"mockups"}/></div>
-                    <div className={"description"}>
                         <div className={"descs"}>
                             <div className={"bar"}>
                             </div>
                             <p className={"descnumber"}>01.</p>
-                            <p className={"descname"}>서비스로 얻을 수 있는 것</p>
-                            <p className={"descdesc"}>음악에서 시작하여 나만의 브랜드를 만들고 싶다는 꿈을 이룬 클레어님의 스토리를 지금 만나보세요!</p>
+                            <p className={"descname"}>{language === 'en' ? 'Whenever I want to tell the music that I like' : '내가 좋아하는 음악을 주변에 알려주고 싶을 때'}</p>
+                            <p className={"descdesc"}>{language === 'en' ? 'You can easily share them with my list!' : '나만 아는 명곡을 주변에 꼭 알려주고 싶었던 적 있나요? 마이리스트를 만들고 프로필 링크를 공유해보세요!'}</p>
                         </div>
                         <div className={"descs"}>
                             <div className={"bar"}>
                             </div>
-                            <p className={"descnumber"}>01.</p>
-                            <p className={"descname"}>서비스로 얻을 수 있는 것</p>
-                            <p className={"descdesc"}>음악에서 시작하여 나만의 브랜드를 만들고 싶다는 꿈을 이룬 클레어님의 스토리를 지금 만나보세요!</p>
+                            <p className={"descnumber"}>02.</p>
+                            <p className={"descname"}>{language === 'en' ? 'Whenever I want to express my emotion with music and pics' : '추억이 담긴 사진과 음악으로 나만의 감성을 담고 싶을 때'}</p>
+                            <p className={"descdesc"}>{language === 'en' ? 'Share precious moment with mylist' : '음악을 들으면 그때의 추억이 떠오르곤 하죠. 친구, 가족, 연인과 함께한 소중한 순간들을 마이리스트로 기록해봐요!'}!</p>
                         </div>
                         <div className={"descs"}>
                             <div className={"bar"}>
                             </div>
-                            <p className={"descnumber"}>01.</p>
-                            <p className={"descname"}>서비스로 얻을 수 있는 것</p>
-                            <p className={"descdesc"}>음악에서 시작하여 나만의 브랜드를 만들고 싶다는 꿈을 이룬 클레어님의 스토리를 지금 만나보세요!</p>
+                            <p className={"descnumber"}>03.</p>
+                            <p className={"descname"}>{language === 'en' ? 'Whenever I want to share my favorite artists' : '내가 좋아하는 아티스트를 마음 껏 티내고 싶을 때'}</p>
+                            <p className={"descdesc"}>{language === 'en' ? 'Make mylist with muisc and picture of your favorite artist and share your link!' : '좋아하는 아티스트의 음악과 사진들로 마이리스트를 채워보세요. 그리고 링크를 공유하며 서로의 취향을 확인해보세요!'}</p>
                         </div>
-                    </div>
                 </div>
+                <div className={"h-10"}></div>
 
                 <div className={"fourthhook"}>
                     <div className={"fourthsubtit"}>
@@ -129,7 +146,6 @@ function Renew() {
                     </div>
                     <br></br>
                     <div className={"fourthmaintit"}>
-                        <img src={highlight} alt="highlight" className={"highlight"}/>
                         <p className={"fourthdesc"}>{language === 'en' ? 'If you want to join in mylist' : '가장 먼저 마이리스트를'}</p>
                         <p className={"fourthdesc"}>{language === 'en' ? 'First on the earth' : '사용하고 싶다면?'}</p>
                     </div>
@@ -142,21 +158,23 @@ function Renew() {
                                 <button type="submit" onClick={() => console.log('btn clicked')}
                                         className="email-input-button">{language === 'en' ? 'Send' : '보내기'}</button>
                             </div>
+                            <br></br>
                             <div>
                                 <input type="checkbox" id="agree" name="agree"/>
                                 <label className={"agree"} htmlFor="agree">
                                     <span
-                                        className="underline">{language === 'en' ? 'terms and conditions' : '개인정보 수집이용'}</span>
-                                    {language === 'en' ? 'I agree to the ' : '에 동의합니다'}
+                                        className="underline white"><a href={"https://drive.google.com/file/d/1piTQBBUmFV6d-fmf24q6BMRcT2HBfaky/view?usp=drive_link"} target={"_blank"}>
+                                        {language === 'en' ? 'I agree to the terms and conditions' : '개인정보 수집이용에 동의합니다'}</a></span>
                                 </label>
                             </div>
                         </form>
                     </div>
-                    <div className={"barbar"}></div>
-                    <div className={"firstinfo"}><p className={"infoo"}>문의 : mylist.company@gmail.com</p></div>
+                    <div className={"firstinfo"}><p className={"infoo"}>{language === 'en' ? 'Inquire' : '문의'} :
+                        mylist.company@gmail.com</p></div>
                     <div className={"secondinfo"}><p className={"infoo"}>MyList Copyright ⓒ TEAM CRUSH. All Rights
                         Reserved</p></div>
                 </div>
+                <br></br>
             </div>
         </div>
     );
