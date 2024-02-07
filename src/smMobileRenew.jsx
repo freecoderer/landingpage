@@ -6,7 +6,7 @@ import materials from "./materials.svg";
 import mockup from "./mockup.svg";
 
 function Renew() {
-    const [isModalOpen, setIsModalOpen] = useState(false);
+
     const [language, setLanguage] = useState('ko'); // default language is English
     const toggleLanguage = () => {
         setLanguage(prevLanguage => prevLanguage === 'en' ? 'ko' : 'en'); // toggle between English and Korean
@@ -21,7 +21,6 @@ function Renew() {
 
     const sendEmail = (e) => {
         e.preventDefault();
-        setIsModalOpen(true);
 
         // Get the email input element
         const emailInput = document.getElementById('email');
@@ -53,15 +52,6 @@ function Renew() {
             });
     };
 
-    const confirmAndSendEmail = () => {
-        emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, form.current, process.env.REACT_APP_PUBLIC_KEY)
-            .then((result) => {
-                console.log(result.text);
-            }, (error) => {
-                console.log(error.text);
-            });
-        setIsModalOpen(false);
-    };
 
     return (
         <div className={styles.root}>
@@ -165,7 +155,7 @@ function Renew() {
                                 <input type="checkbox" id="agree" name="agree"/>
                                 <label className={styles.agree} htmlFor="agree">
                                     <span
-                                        className={styles.white}><a href={"https://drive.google.com/file/d/1piTQBBUmFV6d-fmf24q6BMRcT2HBfaky/view?usp=drive_link"} target={"_blank"}>
+                                        className={styles.white}><a href={"https://drive.google.com/file/d/1piTQBBUmFV6d-fmf24q6BMRcT2HBfaky/view?usp=drive_link"} target={"_blank"}  rel="noreferrer" >
                                         {language === 'en' ? 'I agree to the terms and conditions' : '개인정보 수집이용에 동의합니다'}</a></span>
                                 </label>
                             </div>
