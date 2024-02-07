@@ -81,7 +81,7 @@
 }
 
 .secondhook{
-    height: 51.25rem;
+    height: 20.25rem;
     width: 80rem;
     margin: 3.25rem 5rem;
     display: flex;
@@ -425,4 +425,17 @@
     font-weight: 500;
     line-height: 150%; /* 1.5rem */
     margin-right: 0.5rem;
+}
+.textonew{
+    text-align: left;
+    font-family: 'Pretendard', sans-serif;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 150%; /* 3rem */
+    text-transform: uppercase;
+    background: linear-gradient(86deg, #62E7D8 9.59%, #A54BFF 122.26%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }

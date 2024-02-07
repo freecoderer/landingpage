@@ -82,7 +82,7 @@ function Renew() {
                 </div>
                 <div className={styles.firsthook}>
                     <div className={styles.subfirst}>
-                        <p className={styles.textonew}>{language === 'en' ? 'If you share each others music taste' : '서로의 음악 취향이 궁금할 때'}</p>
+                        <p className={styles.textonew}>{language === 'en' ? 'If you share each others music taste' : '혹시 지금 무슨 노래 듣고 있어?'}</p>
                         <p className={styles.texto}>{language === 'en' ? 'The place where I can find my music taste mylist' : '나만의 음악 취향이'}</p>
                         <p className={styles.texto}>{language === 'en' ? '' : '완성되는 공간, 마이리스트'}</p>
                         <p className={styles.texto2}>Create and Share Your Playlist!</p></div>
@@ -155,8 +155,8 @@ function Renew() {
                                 <input type="checkbox" id="agree" name="agree"/>
                                 <label className={styles.agree} htmlFor="agree">
                                     <span
-                                        className={styles.white}><a href={"https://drive.google.com/file/d/1piTQBBUmFV6d-fmf24q6BMRcT2HBfaky/view?usp=drive_link"} target={"_blank"}  rel="noreferrer" >
-                                        {language === 'en' ? 'I agree to the terms and conditions' : '개인정보 수집이용에 동의합니다'}</a></span>
+                                        className={styles.white}><a href={"https://imgur.com/a/Tr9YKoJ"} target={"_blank"}  rel="noreferrer" ><u>
+                                        {language === 'en' ? 'I agree to the terms and conditions' : '개인정보 수집이용에 동의합니다'}</u></a></span>
                                 </label>
                             </div>
                         </form>
