@@ -2,11 +2,9 @@ import React, { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import logo from './logo.svg';
 import styles from './PcRenew.module.css';
-import hookimg from './Group 33.svg';
 import highlight from './highlight.png';
 import mockup from './mockup.svg';
 import mockup2 from './mockup2.svg';
-import mockups from './mockups.svg';
 import materials from "./materials.svg";
 
 function Renew() {
