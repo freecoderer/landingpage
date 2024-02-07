@@ -1,13 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Pretendard&display=swap');
 
 .backgrounds{
-    background: url('./Background360.svg') lightgray 50% / cover no-repeat;
+    background: url('./Background393.svg') lightgray 50% / cover no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    width: 22.5rem;
-    height: 141.5rem;
+    width: 393px;
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
@@ -230,7 +229,7 @@
 .texto31{
     text-align: center;
     font-family: 'Pretendard';
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-style: normal;
     font-weight: 500;
     line-height: 150%; /* 3rem */
