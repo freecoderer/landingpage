@@ -6,8 +6,23 @@ import highlight from './highlight.png';
 import mockup from './mockup.svg';
 import mockup2 from './mockup2.svg';
 import materials from "./materials.svg";
+import ShareIcon from "./ShareIcon";
 
 function Renew() {
+
+    const handleShare = () => {
+        if (navigator.share) {
+            navigator.share({
+                title: 'MyList',
+                text: 'Check out MyList!',
+                url: window.location.href,
+            })
+                .then(() => console.log('Successful share'))
+                .catch((error) => console.log('Error sharing', error));
+        } else {
+            console.log('Web Share API is not supported in your browser.');
+        }
+    };
     const [language, setLanguage] = useState('ko'); // default language is English
     const toggleLanguage = () => {
         setLanguage(prevLanguage => prevLanguage === 'en' ? 'ko' : 'en'); // toggle between English and Korean
@@ -76,6 +91,7 @@ function Renew() {
                         </svg>
                         <div><p className={styles.btntxt}>{language === 'en' ? '한국어' : 'English'}</p></div>
                     </button>
+                    <ShareIcon onClick={handleShare} className={styles.share}/>
                 </div>
                 <div className={styles.firsthook}>
                     <div className={styles.firsthook1}>

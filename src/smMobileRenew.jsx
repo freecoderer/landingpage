@@ -4,8 +4,23 @@ import emailjs from "@emailjs/browser";
 import logo from "./logo.svg";
 import materials from "./materials.svg";
 import mockup from "./mockup.svg";
+import ShareIcon from './ShareIcon';
 
 function Renew() {
+
+    const handleShare = () => {
+        if (navigator.share) {
+            navigator.share({
+                title: 'MyList',
+                text: 'Check out MyList!',
+                url: window.location.href,
+            })
+                .then(() => console.log('Successful share'))
+                .catch((error) => console.log('Error sharing', error));
+        } else {
+            console.log('Web Share API is not supported in your browser.');
+        }
+    };
 
     const [language, setLanguage] = useState('ko'); // default language is English
     const toggleLanguage = () => {
@@ -79,10 +94,11 @@ function Renew() {
 
                         <div><p className={styles.btntxt}>{language === 'en' ? '한국어' : 'English'}</p></div>
                     </button>
+                    <ShareIcon onClick={handleShare} className={styles.share}/> {/* Replace button with SVG */}
                 </div>
                 <div className={styles.firsthook}>
                     <div className={styles.subfirst}>
-                        <p className={styles.textonew}>{language === 'en' ? 'If you share each others music taste' : '혹시 지금 무슨 노래 듣고 있어?'}</p>
+                    <p className={styles.textonew}>{language === 'en' ? 'If you share each others music taste' : '혹시 지금 무슨 노래 듣고 있어?'}</p>
                         <p className={styles.texto}>{language === 'en' ? 'The place where I can find my music taste mylist' : '나만의 음악 취향이'}</p>
                         <p className={styles.texto}>{language === 'en' ? '' : '완성되는 공간, 마이리스트'}</p>
                         <p className={styles.texto2}>Create and Share Your Playlist!</p></div>

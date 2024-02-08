@@ -4,8 +4,22 @@ import emailjs from "@emailjs/browser";
 import logo from "./logo.svg";
 import materials from "./materials.svg";
 import mockup from "./mockup.svg";
-
+import ShareIcon from "./ShareIcon";
 function Renew() {
+
+    const handleShare = () => {
+        if (navigator.share) {
+            navigator.share({
+                title: 'MyList',
+                text: 'Check out MyList!',
+                url: window.location.href,
+            })
+                .then(() => console.log('Successful share'))
+                .catch((error) => console.log('Error sharing', error));
+        } else {
+            console.log('Web Share API is not supported in your browser.');
+        }
+    };
 
     const [language, setLanguage] = useState('ko'); // default language is English
     const toggleLanguage = () => {
@@ -79,6 +93,7 @@ function Renew() {
 
                         <div><p className={styles.btntxt}>{language === 'en' ? '한국어' : 'English'}</p></div>
                     </button>
+                    <ShareIcon onClick={handleShare} className={styles.share}/>
                 </div>
                 <div className={styles.firsthook}>
                     <div className={styles.subfirst}>
