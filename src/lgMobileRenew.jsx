@@ -146,6 +146,9 @@ function Renew() {
                     </div>
                 </div>
                 <div className={"h-10"}></div>
+                <button onClick={() => window.location.href = 'https://mylist.im'} className={styles.myButton}>MVP
+                    버전 사용하러가기
+                </button>
 
                 <div className={styles.fourthhook}>
                     <div className={styles.fourthsubtit}>
@@ -170,15 +173,18 @@ function Renew() {
                                 <input type="checkbox" id="agree" name="agree"/>
                                 <label className={styles.agree} htmlFor="agree">
                                     <span
-                                        className={styles.white}><a href={"https://imgur.com/a/Tr9YKoJ"} target={"_blank"}  rel="noreferrer" ><u>
+                                        className={styles.white}><a href={"https://imgur.com/a/Tr9YKoJ"}
+                                                                    target={"_blank"} rel="noreferrer"><u>
                                         {language === 'en' ? 'I agree to the terms and conditions' : '개인정보 수집이용에 동의합니다'}</u></a></span>
                                 </label>
                             </div>
                         </form>
                     </div>
-                    <div className={styles.firstinfo}><p className={styles.infoo}>{language === 'en' ? 'Inquire' : '문의'} :
+                    <div className={styles.firstinfo}><p
+                        className={styles.infoo}>{language === 'en' ? 'Inquire' : '문의'} :
                         mylist.company@gmail.com</p></div>
-                    <div className={styles.secondinfo}><p className={styles.infoo}>MyList Copyright ⓒ TEAM CRUSH. All Rights
+                    <div className={styles.secondinfo}><p className={styles.infoo}>MyList Copyright ⓒ TEAM CRUSH. All
+                        Rights
                         Reserved</p></div>
                 </div>
                 <br></br>

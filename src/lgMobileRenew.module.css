@@ -1,5 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Pretendard&display=swap');
 
+.myButton {
+    width: 100%; /* Set the width to 100% */
+    background: linear-gradient(to right, #A792F9, #B2C0FF); /* Set the background color to a linear gradient */
+    color: black; /* Set the font color to black */
+    font-family: 'Pretendard', sans-serif; /* Set the font style to Pretendard */
+    border: none; /* Remove the default button border */
+    text-align: center; /* Center the text */
+    text-decoration: none; /* Remove the default underline */
+    display: inline-block;
+    font-size: 1rem;
+    transition-duration: 0.4s; /* Add animation when you hover over the button */
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 13rem;
+    width: 16rem;
+    height: 5rem;
+    border-radius: 50rem; /* Rounds the button corners */
+}
+
+.myButton:hover {
+    background: #B2C0FF; /* Change the background color when you hover over the button */
+    color: white; /* Change the font color when you hover over the button */
+}
+
 .backgrounds{
     background: url('./Background393.svg') lightgray 50% / cover no-repeat;
     -webkit-background-size: cover;

@@ -124,6 +124,7 @@ function Renew() {
                     <div className={styles.thirdsecondhook}>
                         <p className={styles.texto32}>{language === 'en' ? 'You can only do this with mylist' : '오직 마이리스트에서만 가능하니까'}</p>
                     </div>
+                    <button onClick={() => window.location.href = 'https://mylist.im'} className={styles.myButton}>MVP 버전 사용하러가기</button>
                     <div className={styles.description}>
                         <div className={styles.descs}>
                             <div className={styles.bar}>

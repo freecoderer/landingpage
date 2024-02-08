@@ -98,7 +98,7 @@ function Renew() {
                 </div>
                 <div className={styles.firsthook}>
                     <div className={styles.subfirst}>
-                    <p className={styles.textonew}>{language === 'en' ? 'If you share each others music taste' : '혹시 지금 무슨 노래 듣고 있어?'}</p>
+                        <p className={styles.textonew}>{language === 'en' ? 'If you share each others music taste' : '혹시 지금 무슨 노래 듣고 있어?'}</p>
                         <p className={styles.texto}>{language === 'en' ? 'The place where I can find my music taste mylist' : '나만의 음악 취향이'}</p>
                         <p className={styles.texto}>{language === 'en' ? '' : '완성되는 공간, 마이리스트'}</p>
                         <p className={styles.texto2}>Create and Share Your Playlist!</p></div>
@@ -116,7 +116,7 @@ function Renew() {
                     </div>
                     <div className={styles.height}></div>
                 </div>
-                    <img src={mockup} alt="mockup" className={styles.mockup}/>
+                <img src={mockup} alt="mockup" className={styles.mockup}/>
                 <div className={styles.thirdhook}>
                     <div className={styles.thirdfirsthook}>
                         <p className={styles.texto31}>{language === 'en' ? 'Express yourself with playlist!' : '나만의 플레이리스트를 자유롭게 표현해봐!'}</p>
@@ -124,30 +124,32 @@ function Renew() {
                     <div className={styles.thirdsecondhook}>
                         <p className={styles.texto32}>{language === 'en' ? 'You can only do this with mylist' : '오직 마이리스트에서만 가능하니까'}</p>
                     </div>
-                        <div className={styles.descs}>
-                            <div className={styles.bar}>
-                            </div>
-                            <p className={styles.descnumber}>01.</p>
-                            <p className={styles.descname}>{language === 'en' ? 'Whenever I want to tell the music that I like' : '내가 좋아하는 음악을 주변에 알려주고 싶을 때'}</p>
-                            <p className={styles.descdesc}>{language === 'en' ? 'You can easily share them with my list!' : '나만 아는 명곡을 주변에 꼭 알려주고 싶었던 적 있나요? 마이리스트를 만들고 프로필 링크를 공유해보세요!'}</p>
+                    <div className={styles.descs}>
+                        <div className={styles.bar}>
                         </div>
-                        <div className={styles.descs}>
-                            <div className={styles.bar}>
-                            </div>
-                            <p className={styles.descnumber}>02.</p>
-                            <p className={styles.descname}>{language === 'en' ? 'Whenever I want to express my emotion with music and pics' : '추억이 담긴 사진과 음악으로 나만의 감성을 담고 싶을 때'}</p>
-                            <p className={styles.descdesc}>{language === 'en' ? 'Share precious moment with mylist' : '음악을 들으면 그때의 추억이 떠오르곤 하죠. 친구, 가족, 연인과 함께한 소중한 순간들을 마이리스트로 기록해봐요!'}!</p>
+                        <p className={styles.descnumber}>01.</p>
+                        <p className={styles.descname}>{language === 'en' ? 'Whenever I want to tell the music that I like' : '내가 좋아하는 음악을 주변에 알려주고 싶을 때'}</p>
+                        <p className={styles.descdesc}>{language === 'en' ? 'You can easily share them with my list!' : '나만 아는 명곡을 주변에 꼭 알려주고 싶었던 적 있나요? 마이리스트를 만들고 프로필 링크를 공유해보세요!'}</p>
+                    </div>
+                    <div className={styles.descs}>
+                        <div className={styles.bar}>
                         </div>
-                        <div className={styles.descs}>
-                            <div className={styles.bar}>
-                            </div>
-                            <p className={styles.descnumber}>03.</p>
-                            <p className={styles.descname}>{language === 'en' ? 'Whenever I want to share my favorite artists' : '내가 좋아하는 아티스트를 마음 껏 티내고 싶을 때'}</p>
-                            <p className={styles.descdesc}>{language === 'en' ? 'Make mylist with muisc and picture of your favorite artist and share your link!' : '좋아하는 아티스트의 음악과 사진들로 마이리스트를 채워보세요. 그리고 링크를 공유하며 서로의 취향을 확인해보세요!'}</p>
+                        <p className={styles.descnumber}>02.</p>
+                        <p className={styles.descname}>{language === 'en' ? 'Whenever I want to express my emotion with music and pics' : '추억이 담긴 사진과 음악으로 나만의 감성을 담고 싶을 때'}</p>
+                        <p className={styles.descdesc}>{language === 'en' ? 'Share precious moment with mylist' : '음악을 들으면 그때의 추억이 떠오르곤 하죠. 친구, 가족, 연인과 함께한 소중한 순간들을 마이리스트로 기록해봐요!'}!</p>
+                    </div>
+                    <div className={styles.descs}>
+                        <div className={styles.bar}>
                         </div>
+                        <p className={styles.descnumber}>03.</p>
+                        <p className={styles.descname}>{language === 'en' ? 'Whenever I want to share my favorite artists' : '내가 좋아하는 아티스트를 마음 껏 티내고 싶을 때'}</p>
+                        <p className={styles.descdesc}>{language === 'en' ? 'Make mylist with muisc and picture of your favorite artist and share your link!' : '좋아하는 아티스트의 음악과 사진들로 마이리스트를 채워보세요. 그리고 링크를 공유하며 서로의 취향을 확인해보세요!'}</p>
+                    </div>
                 </div>
                 <div className={"h-10"}></div>
-
+                <button onClick={() => window.location.href = 'https://mylist.im'} className={styles.myButton}>MVP
+                    버전 사용하러가기
+                </button>
                 <div className={styles.fourthhook}>
                     <div className={styles.fourthsubtit}>
                         <p className={styles.fourthname}>{language === 'en' ? 'Please Join on Waitlist' : '대기 명단 등록'}</p>
@@ -171,15 +173,18 @@ function Renew() {
                                 <input type="checkbox" id="agree" name="agree"/>
                                 <label className={styles.agree} htmlFor="agree">
                                     <span
-                                        className={styles.white}><a href={"https://imgur.com/a/Tr9YKoJ"} target={"_blank"}  rel="noreferrer" ><u>
+                                        className={styles.white}><a href={"https://imgur.com/a/Tr9YKoJ"}
+                                                                    target={"_blank"} rel="noreferrer"><u>
                                         {language === 'en' ? 'I agree to the terms and conditions' : '개인정보 수집이용에 동의합니다'}</u></a></span>
                                 </label>
                             </div>
                         </form>
                     </div>
-                    <div className={styles.firstinfo}><p className={styles.infoo}>{language === 'en' ? 'Inquire' : '문의'} :
+                    <div className={styles.firstinfo}><p
+                        className={styles.infoo}>{language === 'en' ? 'Inquire' : '문의'} :
                         mylist.company@gmail.com</p></div>
-                    <div className={styles.secondinfo}><p className={styles.infoo}>MyList Copyright ⓒ TEAM CRUSH. All Rights
+                    <div className={styles.secondinfo}><p className={styles.infoo}>MyList Copyright ⓒ TEAM CRUSH. All
+                        Rights
                         Reserved</p></div>
                 </div>
                 <br></br>
