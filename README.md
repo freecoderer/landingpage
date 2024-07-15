@@ -3,51 +3,43 @@
 ![header](https://capsule-render.vercel.app/api?type=waving&color=B18F6A&text=Mylist%20Landing%20Page&height=100&fontSize=40&fontColor=ffffff)
 
 ## Overview
-Mylist is a music taste-based web and app platform designed to connect users based on their music preferences. The project aims to create a community where people can share their playlists, discover new music, and interact with others who have similar musical tastes. 
+The Mylist Landing Page is designed to attract users to the Mylist platform, a music taste-based web and app service. This landing page provides a brief introduction to Mylist, its features, and encourages visitors to join the community to share and discover music. 
 
 Visit the live site: [info.mylist.im](https://info.mylist.im)
 
 ## Project Goals
-- **Community Building**: Create a platform where users can connect and interact based on shared music interests.
-- **Personalized Music Discovery**: Use AI to recommend music and playlists tailored to each user's unique preferences.
-- **User Engagement**: Encourage users to share their playlists and engage with others, fostering a sense of community.
+- **User Attraction**: Draw visitors to the Mylist platform by highlighting its key features and benefits.
+- **Information Dissemination**: Provide clear and concise information about Mylist, including how it works and what users can expect.
+- **User Engagement**: Encourage visitors to sign up and participate in the Mylist community by creating an appealing and informative landing page.
 
 ## Key Features
-- **Music Sharing**: Users can create and share their playlists with the community.
-- **AI-Based Recommendations**: The platform uses a Retrieval-Augmented Generation (RAG) model to provide personalized music recommendations based on user preferences.
-- **User Profiles**: Each user has a profile showcasing their musical tastes and shared playlists.
-- **Social Interaction**: Users can follow each other, comment on playlists, and engage in discussions about music.
+- **Introduction to Mylist**: A brief overview of what Mylist is and its purpose.
+- **Feature Highlights**: Detailed sections outlining the key features of Mylist, such as music sharing, AI-based recommendations, user profiles, and social interaction.
+- **Call to Action**: Clear and compelling calls to action to encourage visitors to sign up or download the app.
+- **Responsive Design**: Ensures the landing page looks great on all devices, from desktops to mobile phones.
 
 ## 🛠 Technologies Used
 ### Frontend
 - **React**: For building the user interface and ensuring a responsive, dynamic user experience.
-- **HTML/CSS/JavaScript**: Core technologies for web development, used to structure and style the platform.
+- **HTML/CSS/JavaScript**: Core technologies for web development, used to structure and style the landing page.
 
 ### Backend
-- **Node.js & Express.js**: For server-side development, managing API requests, and handling data.
-
-### Database
-- **MongoDB**: To store user data, playlists, and interaction histories.
-
-### AI/ML
-- **Python & Langchain**: For implementing the RAG model and developing the AI-based music recommendation system.
+- **Azure Static Web Apps**: For hosting the static web assets and providing serverless backend services.
 
 ### Project Management
 - **JIRA**: For tracking project progress, managing tasks, and coordinating the development team.
 
 ## Project Achievements
-- **User Engagement**: Successfully secured over 200 active users who regularly use the platform to share and discover music.
-- **Revenue Generation**: Implemented a profile matching service that generated actual sales, demonstrating the platform's potential for monetization.
-- **Awards**: Won an award at the AI를 활용한 문화콘텐츠 아이디어 경진대회 (AI-Driven Cultural Content Idea Competition).
+- **Engaging Design**: Successfully created an engaging and informative landing page that effectively introduces Mylist to potential users.
+- **User Conversion**: Implemented design elements and calls to action that have successfully converted visitors into registered users.
 
 ## Role and Contributions
-- **Founder & Project Owner**: Led the overall vision and direction of the project, ensuring alignment with the goals.
+- **Project Manager**: Led the project, coordinating tasks, managing timelines, and ensuring that project goals were met.
 - **Frontend Developer**: Developed the user interface using React, focusing on creating a seamless and engaging user experience.
-- **AI Developer**: Implemented the AI-based music recommendation system using Python and Langchain, enhancing the platform's personalization capabilities.
-- **Project Manager**: Coordinated the development team, managed timelines, and facilitated communication to ensure smooth project execution.
+- **Content Creator**: Crafted the content for the landing page, ensuring it effectively communicates the value of Mylist.
 
 ## Key Learning and Impact
-Through the Mylist project, I gained invaluable experience in full-stack development, AI implementation, and project management. This project allowed me to hone my technical skills, learn the intricacies of managing a development team, and understand the importance of user engagement and feedback in building a successful platform. The skills and insights gained from Mylist have equipped me to tackle complex projects and drive innovation in the tech industry.
+Through the development of the Mylist Landing Page, I gained valuable experience in web development, UI/UX design, and content creation. This project allowed me to understand the importance of clear communication and effective design in attracting and retaining users. The skills and insights gained from this project have equipped me to create impactful landing pages and drive user engagement.
 
 ## 📬 Contact
 Feel free to reach out for any queries or collaboration opportunities:
