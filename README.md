@@ -1,6 +1,6 @@
 # Landing Page for Mylist
 
-![header](https://capsule-render.vercel.app/api?type=waving&color=7F7FD5&text=Mylist%20Landing%20Page&height=100&fontSize=40&fontColor=ffffff)
+![header](https://capsule-render.vercel.app/api?type=waving&color=BDE0FE&text=Mylist%20Landing%20Page&height=100&fontSize=40&fontColor=ffffff)
 
 ## Overview
 Mylist is a music taste-based web and app platform designed to connect users based on their music preferences. The project aims to create a community where people can share their playlists, discover new music, and interact with others who have similar musical tastes. 
@@ -54,4 +54,4 @@ Feel free to reach out for any queries or collaboration opportunities:
 - **GitHub**: [freecoderer](https://github.com/freecoderer)
 - **LinkedIn**: [Donghyun Kim](https://www.linkedin.com/in/kdh1999dev)
 
-![footer](https://capsule-render.vercel.app/api?section=footer&type=waving&color=7F7FD5)
+![footer](https://capsule-render.vercel.app/api?section=footer&type=waving&color=BDE0FE)
