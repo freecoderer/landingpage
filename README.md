@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+# Landing Page for Mylist
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![header](https://capsule-render.vercel.app/api?type=waving&color=7F7FD5&text=Mylist%20Landing%20Page&height=100&fontSize=40&fontColor=ffffff)
 
-## Available Scripts
+## Overview
+Mylist is a music taste-based web and app platform designed to connect users based on their music preferences. The project aims to create a community where people can share their playlists, discover new music, and interact with others who have similar musical tastes. 
 
-In the project directory, you can run:
+Visit the live site: [info.mylist.im](https://info.mylist.im)
 
-### `npm start`
+## Project Goals
+- **Community Building**: Create a platform where users can connect and interact based on shared music interests.
+- **Personalized Music Discovery**: Use AI to recommend music and playlists tailored to each user's unique preferences.
+- **User Engagement**: Encourage users to share their playlists and engage with others, fostering a sense of community.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Key Features
+- **Music Sharing**: Users can create and share their playlists with the community.
+- **AI-Based Recommendations**: The platform uses a Retrieval-Augmented Generation (RAG) model to provide personalized music recommendations based on user preferences.
+- **User Profiles**: Each user has a profile showcasing their musical tastes and shared playlists.
+- **Social Interaction**: Users can follow each other, comment on playlists, and engage in discussions about music.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠 Technologies Used
+### Frontend
+- **React**: For building the user interface and ensuring a responsive, dynamic user experience.
+- **HTML/CSS/JavaScript**: Core technologies for web development, used to structure and style the platform.
 
-### `npm test`
+### Backend
+- **Node.js & Express.js**: For server-side development, managing API requests, and handling data.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Database
+- **MongoDB**: To store user data, playlists, and interaction histories.
 
-### `npm run build`
+### AI/ML
+- **Python & Langchain**: For implementing the RAG model and developing the AI-based music recommendation system.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Project Management
+- **JIRA & Trello**: For tracking project progress, managing tasks, and coordinating the development team.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Project Achievements
+- **User Engagement**: Successfully secured over 200 active users who regularly use the platform to share and discover music.
+- **Revenue Generation**: Implemented a profile matching service that generated actual sales, demonstrating the platform's potential for monetization.
+- **Awards**: Won an award at the AI를 활용한 문화콘텐츠 아이디어 경진대회 (AI-Driven Cultural Content Idea Competition).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Role and Contributions
+- **Founder & Project Owner**: Led the overall vision and direction of the project, ensuring alignment with the goals.
+- **Frontend Developer**: Developed the user interface using React, focusing on creating a seamless and engaging user experience.
+- **AI Developer**: Implemented the AI-based music recommendation system using Python and Langchain, enhancing the platform's personalization capabilities.
+- **Project Manager**: Coordinated the development team, managed timelines, and facilitated communication to ensure smooth project execution.
 
-### `npm run eject`
+## Key Learning and Impact
+Through the Mylist project, I gained invaluable experience in full-stack development, AI implementation, and project management. This project allowed me to hone my technical skills, learn the intricacies of managing a development team, and understand the importance of user engagement and feedback in building a successful platform. The skills and insights gained from Mylist have equipped me to tackle complex projects and drive innovation in the tech industry.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 📬 Contact
+Feel free to reach out for any queries or collaboration opportunities:
+- **GitHub**: [freecoderer](https://github.com/freecoderer)
+- **LinkedIn**: [Donghyun Kim](https://www.linkedin.com/in/kdh1999dev)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![footer](https://capsule-render.vercel.app/api?section=footer&type=waving&color=7F7FD5)
