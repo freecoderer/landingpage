@@ -33,7 +33,7 @@ Visit the live site: [info.mylist.im](https://info.mylist.im)
 - **Python & Langchain**: For implementing the RAG model and developing the AI-based music recommendation system.
 
 ### Project Management
-- **JIRA & Trello**: For tracking project progress, managing tasks, and coordinating the development team.
+- **JIRA**: For tracking project progress, managing tasks, and coordinating the development team.
 
 ## Project Achievements
 - **User Engagement**: Successfully secured over 200 active users who regularly use the platform to share and discover music.
